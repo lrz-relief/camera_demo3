@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/permissionFragment">
+
+
+    <fragment
+        android:id="@+id/cameraFragment"
+        android:name="com.example.camera_demo.CameraFragment"
+        android:label="fragment_camera"
+        tools:layout="@layout/fragment_camera" >
+
+        <action
+            android:id="@+id/action_camera_to_photoWarehouse"
+            app:destination="@id/photoWarehouseFragment" />
+
+        <action
+            android:id="@+id/action_camera_to_permission"
+            app:destination="@id/permissionFragment"
+            app:popUpTo="@id/cameraFragment"
+            app:popUpToInclusive="true"/>
+        <action
+            android:id="@+id/action_cameraFragment_to_videoCaptureFragment"
+            app:destination="@id/videoCaptureFragment" />
+
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/photoWarehouseFragment"
+        android:name="com.example.camera_demo.PhotoWarehouseFragment"
+        android:label="fragment_photo_warehouse"
+        tools:layout="@layout/fragment_photo_warehouse" >
+        <argument
+            android:name="root_directory"
+            app:argType="string" />
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/permissionFragment"
+        android:name="com.example.camera_demo.PermissionFragment"
+        android:label="fragment_permission"
+        tools:layout="@layout/fragment_permission" >
+
+        <action
+            android:id="@+id/action_permissions_to_camera"
+            app:destination="@id/cameraFragment"
+            app:popUpTo="@id/permissionFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_permissionFragment_to_videoCaptureFragment"
+            app:destination="@id/videoCaptureFragment" />
+
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/videoCaptureFragment"
+        android:name="com.example.camera_demo.VideoCaptureFragment"
+        android:label="fragment_video_capture"
+        tools:layout="@layout/fragment_video_capture" >
+        <action
+            android:id="@+id/action_videoCaptureFragment_to_cameraFragment"
+            app:destination="@id/cameraFragment" />
+        <action
+            android:id="@+id/action_videoCaptureFragment_to_videoViewerFragment"
+            app:destination="@id/videoViewerFragment" />
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/videoViewerFragment"
+        android:name="com.example.camera_demo.VideoViewerFragment"
+        android:label="fragment_video_viewer"
+        tools:layout="@layout/fragment_video_viewer" >
+        <action
+            android:id="@+id/action_videoViewerFragment_to_videoCaptureFragment"
+            app:destination="@id/videoCaptureFragment" />
+        <argument
+            android:name="uri"
+            app:argType="android.net.Uri" />
+    </fragment>
+
+
+</navigation>

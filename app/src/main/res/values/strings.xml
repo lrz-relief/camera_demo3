@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">camera_demo</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="switch_camera_button_alt">Switch Camera</string>
+    <string name="capture_button_alt">Capture</string>
+    <string name="photowarehouse_button_alt">photoWarehouse</string>
+    <string name="back_button_alt">Back</string>
+    <string name="share_button_alt">Share</string>
+    <string name="delete_button_alt">Delete</string>
+    <string name="share_hint">Share using</string>
+    <string name="delete_dialog">Delete current photo?</string>
+    <string name="delete_title">Confirm</string>
+    <string name="camera">Camera</string>
+    <string name="capture">Capture</string>
+    <string name="stop">Stop</string>
+    <string name="video_viewer_tips">Tips for the page:\n\t- tap anywhere to replay\n\t- tap system back button to go back</string>
+    <string name="Idle">Idle</string>
+    <string name="application_brief_introduction">本程序是基于CameraX 编写的实现拍照与录像功能的应用程序:\n
+                                    \t- 主要功能是录像与拍照\n
+                                    \t- 拍照与录像之前都有预览功能\n
+                                    \n进阶功能:\n
+                                    \t- 在图像储存仓库可以实现最新拍摄的照片的缩略图展示\n
+                                    \t- 拍摄的照片可以储存与分享，分享功能是与其他应用关联而形成的功能\n
+                                    \t- 拍摄的视频不可以分享，也不实现缩略图展示\n
+                                    \n接下来:\n
+                                    \t** 触摸屏幕任意位置以继续，将跳转到视频拍摄功能**\n</string>
+</resources>
